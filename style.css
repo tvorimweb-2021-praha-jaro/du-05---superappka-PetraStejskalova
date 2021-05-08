@@ -26,9 +26,94 @@ body {
 .obal {
     width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
     margin: 0 auto; /* pruh je na stránce vycentrovaný */
-    background: white;
+    background: #ffffff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
-.hlavicka
+.obal{
+    width: auto;
+}
+.hlavicka {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    color: #25133d;
+    padding: 1.2rem;
+    padding-bottom: 0.8rem;
+}
+.hlavicka p {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    padding-right: 2rem;
+}
+.vlastnosti-aplikace {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+/* .vlastnosti-aplikace li {
+    padding-right: 0.5rem;
+} */
+.predstaveni-aplikace {
+    background-image: url(images/pozadi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #e5e5e5;
+    padding: 1.2rem;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+}
+h2 {
+    font-weight: 300;
+}
+h3 {
+    margin: 0.6rem;
+}
+.mobil {
+    display: none;
+}
+.predstaveni-aplikace ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+}
+.tlacitka a {
+    text-decoration: none;
+    color: #e5e5e5;
+    border: 0.1rem solid #e5e5e5;
+    border-radius: 0.3rem;
+    padding: 0.7rem 1.4rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.tlacitka li {
+    margin: 1rem 0;
+}
+.modre-tlacitko {
+    background-color: #48418e;
+    margin-right: 0.5rem;
+}
+.popis-aplikace {
+    text-align: center;
+    padding: 1.2rem;
+    color: #48418e;
+}
+.popis-aplikace p {
+    color: #25133d;
+}
+.paticka {
+    text-align: center;
+    background-color: #48418e;
+    color: #e5e5e5;
+    font-size: 0.9rem;
+}
+.paticka p {
+    margin: 0;
+    padding: 0.5rem;
+}
