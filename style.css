@@ -36,26 +36,27 @@ body {
 }
 .hlavicka {
     display: flex;
-    justify-content: left;
     flex-wrap: wrap;
-    color: #25133d;
     padding: 1.2rem;
-    padding-bottom: 0.8rem;
+    font-weight: 300;
+    color: #25133d;
 }
 .hlavicka p {
     text-transform: uppercase;
-    font-weight: 700;
     margin: 0;
-    padding-right: 2rem;
+    font-weight: 700;
 }
 .vlastnosti-aplikace {
     display: flex;
+    flex-basis: 360px;
     justify-content: space-between;
-    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
-/* .vlastnosti-aplikace li {
-    padding-right: 0.5rem;
-} */
+.vlastnosti-aplikace li {
+    list-style: none;
+    padding-left: 0;
+}
 .predstaveni-aplikace {
     background-image: url(images/pozadi.jpg);
     background-size: cover;
@@ -78,11 +79,8 @@ h3 {
 .mobil {
     display: none;
 }
-.predstaveni-aplikace ul {
+.tlacitka {
     display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding-left: 0;
 }
 .tlacitka a {
     text-decoration: none;
@@ -91,13 +89,12 @@ h3 {
     border-radius: 0.3rem;
     padding: 0.7rem 1.4rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-.tlacitka li {
-    margin: 1rem 0;
+    flex: 1;
+
 }
 .modre-tlacitko {
     background-color: #48418e;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
 }
 .popis-aplikace {
     text-align: center;
