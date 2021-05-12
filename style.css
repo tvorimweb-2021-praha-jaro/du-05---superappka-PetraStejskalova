@@ -59,9 +59,9 @@ body {
 }
 .predstaveni-aplikace {
     background-image: url(images/pozadi.jpg);
-    background-size: cover;
+    /* background-size: cover; */
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     color: var(--text-na-pozadi);
     padding: 1rem 1.5rem;
 }
@@ -131,6 +131,53 @@ h2 {
     border: 0.1rem solid #e5e5e567;
 }
 @media screen and (min-width: 480px) {
+    .tlacitka a {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+}
+@media screen and (min-width: 630px) {
+    .hlavicka {
+        display: block;
+    }
+    .hlavicka a {
+        display: inline-block;
+        min-width: 50px;
+    }   
+    .predstaveni-aplikace {
+        padding: 1rem 2rem;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+        line-height: 1.4;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    .tlacitka a {
+        padding: 0.8rem 2rem;
+        font-size: 1.5rem;
+        margin-right: 1.4rem;
+    }
+    .popis-aplikace {
+        display: flex;
+        justify-content: space-between;
+    }
+    .popis {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 30%;
+    }
+    .popis img {
+        order: -1;
+        margin-top: 1rem;
+    }
+}
+/* @media screen and (min-width: 480px) {
     .predstaveni-aplikace {
         padding: 2rem;
     }
@@ -226,4 +273,4 @@ h2 {
         width: initial;
         
     }
-}
+} */
