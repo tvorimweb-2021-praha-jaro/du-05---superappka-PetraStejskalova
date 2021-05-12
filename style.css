@@ -31,96 +31,106 @@ body {
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+:root {
+    --text-na-pozadi: #ffffff;
+    --tmavy-text: #25133d;
+    --svetly-text: #48418e;
+}
 .obal {
     width: auto;
 }
 .hlavicka {
     display: flex;
-    flex-wrap: wrap;
-    padding: 1.2rem;
+    flex-wrap: wrap;   
     font-weight: 300;
-    color: #25133d;
 }
-.hlavicka p {
-    text-transform: uppercase;
-    margin: 0;
+.hlavicka-tucne {
     font-weight: 700;
-    flex-basis: 140px;
 }
-.vlastnosti-aplikace {
-    display: flex;
-    flex-basis: 360px;
-    justify-content: space-between;
-    padding-left: 0;
-    margin: 0;
-}
-.vlastnosti-aplikace li {
-    list-style: none;
-    padding-left: 0;
+.hlavicka a {
+    display: block;
+    text-decoration: none;
+    color: var(--tmavy-text);
+    min-width: 50%;
+    min-height: 40px;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    flex: 1;
 }
 .predstaveni-aplikace {
     background-image: url(images/pozadi.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: #e5e5e5;
-    padding: 1.2rem;
+    color: var(--text-na-pozadi);
+    padding: 1rem 1.5rem;
 }
 h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 400;
     margin: 0;
 }
 h2 {
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.2;
-}
-h3 {
-    margin: 0.6rem;
+    margin: 0;
 }
 .mobil {
     display: none;
 }
-.tlacitka {
-    display: flex;
-}
 .tlacitka a {
+    display: block;
     text-decoration: none;
-    color: #e5e5e5;
-    border: 0.1rem solid #e5e5e5;
+    color: var(--text-na-pozadi);
+    border: 0.1rem solid var(--text-na-pozadi);
     border-radius: 0.5rem;
     padding: 0.7rem 1rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.555);
-    flex-grow: 1;
     text-align: center;
+    margin: 1rem 0;
 }
 .modre-tlacitko {
-    background-color: #48418e;
-    margin-right: 1rem;
+    background-color: var(--svetly-text);
 }
 .popis-aplikace {
     text-align: center;
-    padding: 1.2rem;
-    color: #48418e;
+    padding: 1.2rem 0;
+    color: var(--svetly-text);
+    padding: 0 1.2rem;
 }
 .popis-aplikace p {
-    color: #25133d;
+    color: var(--tmavy-text);
+    margin-top: 0;
 }
 .paticka {
     text-align: center;
-    background-color: #48418e;
-    color: #e5e5e5;
+    background-color: var(--svetly-text);
+    color: var(--text-na-pozadi);
     font-size: 0.9rem;
 }
 .paticka p {
     margin: 0;
     padding: 0.5rem;
 }
-@media screen and (min-width: 570px) {
-    .hlavicka {
-        padding: 1rem 2rem;
-        justify-content: flex-start;
-    }
+.hlavicka a:hover,
+.hlavicka a:focus {
+    background-color: var(--svetly-text);
+    color: #e5e5e5;;
+}
+.neoznacene-tlacitko:hover,
+.neoznacene-tlacitko:focus {
+    background-color: var(--svetly-text);
+    color: #e5e5e5;
+    border: 0.1rem solid var(--svetly-text);
+}
+.modre-tlacitko:hover,
+.modre-tlacitko:focus {
+    background-color: transparent;
+    color: #e5e5e5;
+    border: 0.1rem solid #e5e5e567;
+}
+@media screen and (min-width: 480px) {
     .predstaveni-aplikace {
         padding: 2rem;
     }
@@ -145,6 +155,21 @@ h3 {
     .popis-aplikace {
         padding: 2rem;
     }
+}
+@media screen and (min-width: 700px){
+    .hlavicka {
+        flex-wrap: nowrap;
+        justify-content: left;
+    }
+    .hlavicka a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 150px;
+        flex-grow: 0;
+        padding: 0 2rem;
+        min-height: 50px;
+    }   
 }
 @media screen and (min-width: 860px) {
     .hlavicka {
