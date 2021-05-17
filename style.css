@@ -38,6 +38,7 @@ body {
 }
 .obal {
     width: auto;
+    max-width: 960px;
 }
 .hlavicka {
     display: flex;
@@ -46,6 +47,7 @@ body {
 }
 .hlavicka-tucne {
     font-weight: 700;
+    text-transform: uppercase;
 }
 .hlavicka a {
     display: block;
@@ -59,7 +61,6 @@ body {
 }
 .predstaveni-aplikace {
     background-image: url(images/pozadi.jpg);
-    /* background-size: cover; */
     background-repeat: no-repeat;
     background-position: left;
     color: var(--text-na-pozadi);
@@ -70,7 +71,7 @@ h1 {
     font-weight: 400;
     margin: 0;
 }
-h2 {
+.predstaveni-aplikace p {
     font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.2;
@@ -150,7 +151,7 @@ h2 {
     h1 {
         font-size: 5rem;
     }
-    h2 {
+    .predstaveni-aplikace p {
         font-size: 3rem;
         line-height: 1.4;
     }
@@ -177,100 +178,19 @@ h2 {
         margin-top: 1rem;
     }
 }
-/* @media screen and (min-width: 480px) {
-    .predstaveni-aplikace {
-        padding: 2rem;
-    }
-    h1 {
-        font-size: 4.8rem;
-    }
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 2.5rem;
-    }
-    h3 {
-        font-size: 1.2rem;
-    }
-    .tlacitka {
-        margin-bottom: 1rem;
-    }
-    .tlacitka a {
-        flex-grow: 0;
-        padding: 0.8rem 1.7rem;
-        font-size: 1.2rem;
-    }
-    .popis-aplikace {
-        padding: 2rem;
-    }
-}
-@media screen and (min-width: 700px){
-    .hlavicka {
-        flex-wrap: nowrap;
-        justify-content: left;
-    }
-    .hlavicka a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 150px;
-        flex-grow: 0;
-        padding: 0 2rem;
-        min-height: 50px;
-    }   
-}
-@media screen and (min-width: 860px) {
-    .hlavicka {
-        padding: 1rem 2.4rem;
-    }
-    .hlavicka p {
-        flex-basis: 170px;
-    }
-    .vlastnosti-aplikace {
-        min-width: 400px;
-    }
-    .predstaveni-aplikace {
-        padding: 2.4rem;
-    }
-    h1 {
-        font-size: 5.5rem;
-    }
-    h2 {
-        font-size: 2.3rem;
-        margin-bottom: 3.2rem;
-    }
-    h3 {
-        font-size: 1.3rem;
-    }
-    .tlacitka a {
-        padding: 0.9rem 1.9rem;
-        font-size: 1.3rem
-    }
-    .modre-tlacitko {
-        margin-right: 1.3rem;
-    }
-    .popis-aplikace {
-        padding: 2.4rem;
-        display: flex;
-        justify-content: space-between;
-    }
-    .popis {
-        max-width: calc(1/3.2 * 100%);
-    }
-}
 @media screen and (min-width: 960px) {
-    .obal {
-        width: 960px;
-    }
-    .predstaveni-aplikace {
-        position: relative;
-    }
     .mobil {
         display: initial;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        height: initial;
-        width: initial;
-        
+        width: 370px;
+        height: 370px;
+        margin-bottom: -1rem;
     }
-} */
+    .predstaveni-aplikace {
+        display: flex;
+        padding: 1rem 0 1rem 2rem;
+        align-items: flex-end;
+    }
+    .predstaveni-aplikace p {
+        max-width: 80%;
+    }
+}
