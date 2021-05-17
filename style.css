@@ -44,6 +44,7 @@ body {
     display: flex;
     flex-wrap: wrap;   
     font-weight: 300;
+    font-size: 0.9rem;
 }
 .hlavicka-tucne {
     font-weight: 700;
@@ -56,7 +57,7 @@ body {
     min-width: 50%;
     min-height: 40px;
     text-align: center;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 0.9rem;
     flex: 1;
 }
 .predstaveni-aplikace {
@@ -64,7 +65,7 @@ body {
     background-repeat: no-repeat;
     background-position: left;
     color: var(--text-na-pozadi);
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.3rem;
 }
 h1 {
     font-size: 2.5rem;
@@ -74,8 +75,11 @@ h1 {
 .predstaveni-aplikace p {
     font-size: 1.5rem;
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.3;
     margin: 0;
+}
+h3 {
+    font-size: 1.4rem;
 }
 .mobil {
     display: none;
@@ -86,7 +90,7 @@ h1 {
     color: var(--text-na-pozadi);
     border: 0.1rem solid var(--text-na-pozadi);
     border-radius: 0.5rem;
-    padding: 0.7rem 1rem;
+    padding: 0.8rem 2rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.555);
     text-align: center;
     margin: 1rem 0;
@@ -132,12 +136,6 @@ h1 {
     border: 0.1rem solid #e5e5e567;
 }
 @media screen and (min-width: 480px) {
-    .tlacitka a {
-        display: inline-block;
-        margin-right: 1rem;
-    }
-}
-@media screen and (min-width: 630px) {
     .hlavicka {
         display: block;
     }
@@ -145,23 +143,18 @@ h1 {
         display: inline-block;
         min-width: 50px;
     }   
-    .predstaveni-aplikace {
-        padding: 1rem 2rem;
-    }
     h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
     .predstaveni-aplikace p {
-        font-size: 3rem;
+        font-size: 2.3rem;
         line-height: 1.4;
     }
-    h3 {
-        font-size: 1.6rem;
-    }
     .tlacitka a {
-        padding: 0.8rem 2rem;
-        font-size: 1.5rem;
-        margin-right: 1.4rem;
+        display: inline-block;
+        padding: 0.7rem 1.5rem;
+        font-size: 1.2rem;
+        margin-right: 1rem;
     }
     .popis-aplikace {
         display: flex;
@@ -178,17 +171,21 @@ h1 {
         margin-top: 1rem;
     }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 740px) {
     .mobil {
         display: initial;
-        width: 370px;
-        height: 370px;
+        width: 320px;
+        height: 320px;
         margin-bottom: -1rem;
+        margin-top: -0.8rem;
     }
     .predstaveni-aplikace {
         display: flex;
-        padding: 1rem 0 1rem 2rem;
+        padding: 1rem 0 1rem 1.5rem;
         align-items: flex-end;
+    }
+    .predstaveni-aplikace-leva-cast {
+        margin-bottom: auto;
     }
     .predstaveni-aplikace p {
         max-width: 80%;
